@@ -1,7 +1,7 @@
-[![GitHub Release](https://img.shields.io/github/release/sailsforce/togo-read-micro.svg?style=flat)]() [![CodeFactor](https://www.codefactor.io/repository/github/sailsforce/togo-read-micro/badge)](https://www.codefactor.io/repository/github/sailsforce/togo-read-micro) ![security rating](./badges/securityRating.svg) ![vulnerabilities](./badges/vulnerabilities.svg) [![codecov](https://codecov.io/gh/sailsforce/inv-read-micro/branch/main/graph/badge.svg?token=U1Q38I84A2)](https://codecov.io/gh/sailsforce/inv-read-micro)
+[![GitHub Release](https://img.shields.io/github/release/sailsforce/togo-write-micro.svg?style=flat)]() [![CodeFactor](https://www.codefactor.io/repository/github/sailsforce/togo-write-micro/badge)](https://www.codefactor.io/repository/github/sailsforce/togo-write-micro) ![security rating](./badges/securityRating.svg) ![vulnerabilities](./badges/vulnerabilities.svg) [![codecov](https://codecov.io/gh/sailsforce/inv-write-micro/branch/main/graph/badge.svg?token=U1Q38I84A2)](https://codecov.io/gh/sailsforce/inv-write-micro)
 
-# togo-read-micro
-Togo read micro-service
+# togo-write-micro
+Togo write micro-service
 
 ## Install pre-commit
 ```
@@ -10,8 +10,8 @@ brew install pre-commit
 
 ## Run Application Using Doppler
 ```
-go build -o bin/togo-read -v .
-doppler run --command="./bin/togo-read"
+go build -o bin/togo-write -v .
+doppler run --command="./bin/togo-write"
 ```
 
 ## Run Tests Using Doppler
@@ -39,7 +39,7 @@ go test ./tests -coverprofile=./tests/coverage.out -coverpkg ./... -json > ./tes
 brew install sonar-scanner
 
 sonar-scanner \
-  -Dsonar.projectKey=togo-read-micro \
+  -Dsonar.projectKey=togo-write-micro \
   -Dsonar.sources=. \
   -Dsonar.host.url=${SONAR_HOST_URL} \
   -Dsonar.login=${SONAR_LOGIN}
