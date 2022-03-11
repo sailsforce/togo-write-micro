@@ -1,0 +1,17 @@
+{
+	"node_name": "togo",
+  "service": {
+    "name": "togo-write",
+    "id": "write-1",
+    "port": 8882,
+    "check": {
+      "http": "http://localhost:8882/v1/heartbeat",
+      "method": "GET",
+      "interval": "5s",
+      "timeout": "1s"
+    },
+    "connect": {
+      "sidecar_service": {}
+    }
+  }
+}
