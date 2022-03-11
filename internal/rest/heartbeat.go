@@ -36,7 +36,7 @@ func GetHeartbeat(rw http.ResponseWriter, req *http.Request) {
 		ReleaseDate:    config.RV.ReleaseDate,
 		ReleaseVersion: config.RV.ReleaseVersion,
 		Slug:           config.RV.Slug,
-		Message:        "togo read service",
+		Message:        "togo write service",
 	}
 
 	logger.Info("heartbeat request finished.")
